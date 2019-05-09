@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burrow</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+    <script type="text/javascript" src="http://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="../static/js/d3-tip.js"></script>
+    <style>
+
+        .link {
+		fill: none;
+		stroke: black;
+		stroke-opacity: .5;
+		stroke-width: 8px;
+	}
+
+        .sent text {
+            fill: white;
+            font: 10px sans-serif;
+            text-anchor: end;
+        }
+
+        .sent rect.bar-pos {
+            fill: #FF6633;
+        }
+
+        .sent rect.bar-neg {
+            fill: #0099CC;
+        }
+        .d3-tip {
+            line-height: 1;
+            width: 200px;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            border-radius: 2px;
+        }
+
+        /* Creates a small triangle extender for the tooltip */
+        .d3-tip:after {
+            box-sizing: border-box;
+            display: inline;
+            font-size: 10px;
+            width: 100%;
+            line-height: 1;
+            color: rgba(0, 0, 0, 0.8);
+            content: "\25BC";
+            position: absolute;
+            text-align: center;
+        }
+
+        /* Style northward tooltips differently */
+        .d3-tip.n:after {
+            margin: -1px 0 0 0;
+            top: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<svg class="conns"></svg>
+<svg class="sent"></svg>
+<svg class="cohesive"></svg>
+</body>
+<script type="text/javascript" src="../static/js/conns.js"></script>
+</html>
+
